@@ -1,1 +1,1 @@
-WIP homebridge plugin for controlling your cellbridge gate
+WIP homebridge plugin for controlling your cellgate gate

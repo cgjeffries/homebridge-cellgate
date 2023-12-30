@@ -1,15 +1,65 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
+  "pluginAlias": "cellgate",
   "pluginType": "platform",
   "singular": true,
   "schema": {
     "type": "object",
     "properties": {
-      "name": {
-        "title": "Name",
-        "type": "string",
-        "required": true,
-        "default": "Example Dynamic Platform"
+      "Gates": {
+        "title": "Gates",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "Name": {
+              "title": "Gate Name",
+              "type": "string",
+              "required": true
+            },
+            "Config": {
+              "title": "Config",
+              "type": "object",
+              "properties": {
+                "ModuleModemId": {
+                  "title": "ModuleModemId",
+                  "type": "integer",
+                  "required": true
+                },
+                "DeviceSerialNumber": {
+                  "title": "DeviceSerialNumber",
+                  "type": "string",
+                  "required": true
+                },
+                "ModuleId": {
+                  "title": "ModuleId",
+                  "type": "integer",
+                  "required": true
+                },
+                "ModulePortId": {
+                  "title": "ModulePortId",
+                  "type": "integer",
+                  "required": true
+                },
+                "ModuleType": {
+                  "title": "ModuleType",
+                  "type": "string",
+                  "required": true,
+                  "default": "Gate"
+                },
+                "PortNumber": {
+                  "title": "PortNumber",
+                  "type": "integer",
+                  "required": true
+                },
+                "UserID": {
+                  "title": "UserID",
+                  "type": "integer",
+                  "required": true
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
